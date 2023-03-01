@@ -42,7 +42,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.labels {
+    font-size: 40px;
+}
 label , h3 , span {
    font-size: 20px;
   background: -webkit-linear-gradient(#eee, #333);
@@ -60,16 +62,16 @@ label , h3 , span {
     .search-container input {
         font-size: 30px;
     }
-    .search-container label {
+    .labels {
         font-size: 30px;
     }
 }
 @media screen and (max-width: 576px) {
-    .search-container label {
-        font-size: 20px;
+    .labels {
+        font-size: 10px;
     }
     .search-container input {
-        font-size: 20px;
+        font-size: 10px;
     }
 	.movie-container {
 		grid-template-columns: repeat(1, 1fr);
