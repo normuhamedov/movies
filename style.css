@@ -1,0 +1,113 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+    
+}
+
+.movie-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+}
+
+.movie-card {
+	width: 100%;
+	border: 10px solid rgb(235, 4, 4);
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(37, 0, 245)) 1;
+
+}
+.movie-card:hover{
+    border-image: linear-gradient(to right, rgb(51, 0, 255), rgb(245, 0, 0)) 1;
+    transform: scale(1.08);
+    transition: all ease 0.5s;
+}
+.movie-card img {
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.search-container {
+	display: flex;
+    flex-direction: row;
+    align-items: center;justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-container input {
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(37, 0, 245)) 1;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(255, 0, 0) 100%);
+    font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #423737);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+label , h3 , span {
+   font-size: 20px;
+  background: -webkit-linear-gradient(#eee, #333);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 992px) {
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (max-width: 800px) {
+    
+    .search-container input {
+        font-size: 30px;
+    }
+    .search-container label {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .search-container label {
+        font-size: 20px;
+    }
+    .search-container input {
+        font-size: 20px;
+    }
+	.movie-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+    
+}
+body {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(255, 0, 0) 100%);
+
+}
+.loader-container {
+    
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.loader {
+	width: 200px;
+	height: 200px;
+    
+	background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(255, 0, 0) 100%);
+	border-bottom-color: #001eff;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 0.5s linear infinite;
+	margin: 0 auto;
+    
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
